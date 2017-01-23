@@ -1,0 +1,302 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage}
+\usepackage{amssymb}
+
+\begin{document}
+\tableofcontents
+\title{Chapter1 Basic Concepts on Matrices and Vectors}
+\author{fsjohnhuang}
+\date{\today}
+\maketitle
+
+\section{Matrix}
+\subsection{Definitions}
+A \textbf{matrix} is a rectangular array of scalars.\\
+If the matrix has $m$ rows and $n$ columns, we say the \textbf{size} of matrix is \textbf{m by n}, written $m \times n$.\\
+The matrix is called square if $m = n$.\\
+The scalar in $i$th row and $j$th column is called \textbf{$(i,j)$-entry} of the matrix.\\
+
+\subsection{Notation}
+\begin{equation}
+	A =
+	\left[
+	\begin{array}{ccc}
+	a_{11} & \cdots  & a_{1n} \\
+	\vdots & \ddots & \vdots \\
+	a_{m1} & \cdots  & a_{mn}
+	\end{array}
+	\right]
+	= [a_{ij}] \in M_{m \times n}
+\end{equation}
+$M_{m \times n}$ denotes the set that contains all matrices whose size is $m \times n$.\\
+
+\subsection{Equality of matrices}
+\subsubsection{Definitions}
+We say two matrices $A$ and $B$ are equal if
+\begin{enumerate}
+\item they have the same size.
+\item they have equal corresponding entries.
+\end{enumerate} 
+Let $A,B \in M_{m \times n}$
+
+Then $A = B \Longleftrightarrow a_{ij} = b_{ij}, \forall i=1, \ldots ,m, j=1, \ldots ,n$
+
+\subsection{Submatrices}
+\subsubsection{Definitions}
+A submatrix is obtained by deleting from a matrix entire rows and/or columns.\\
+\subsubsection{Sample}
+\begin{equation}
+	\left[
+	\begin{array}{ccc}
+	1 & 2 & 3 \\
+	2 & 1 & 4 \\
+	\end{array}
+	\right]
+	is\ a\ submatrix\ of
+	\left[
+	\begin{array}{ccc}
+	1 & 2 & 3 \\
+	2 & 1 & 4 \\
+	1 & 3 & 2 \\
+	\end{array}
+	\right]
+\end{equation}
+
+\subsection{Matrix addition}
+\subsubsection{Definitions}
+Let A and B be in matrix $m \times n$. We define the sum of A and B, denoted $A+B$, to be a $m \times n$ matrix obtained by adding the corressponding entries of A and B; that is the $m \times n$ matrix whose $(i,j)-entry$ is $a_{ij}+b{ij}$.
+\subsubsection{Notation}
+Let $A,B \in M_{m \times n}$
+
+Then $A+B=[a_{ij}+b_{ij}], \forall i=1, \ldots ,m, j=1, \ldots ,n$
+\subsubsection{Theorem}
+\begin{enumerate}
+\item[Commutative] $A+B=B+A$
+\item[Associative] $(A+B)+C=A+(B+C)$
+\end{enumerate}
+
+\subsection{Scalar Multiplication}
+\subsubsection{Definitions}
+Let $A$ be an $m \times n$ matrix and $c$ be a scalar. The scalar multiple $cA$ of matrix $A$ is defined to be the $m \times n$ matrix whose $(i,j)-entries$ is $c \times a_{ij}$.
+\subsubsection{Notation}
+Let $A \in M_{m \times n}$ and $c \in R$
+
+Then $cA=[c \times a_{ij}], \forall i=1, \ldots ,m, j=1, \ldots ,n$
+\subsubsection{Theorem}
+\begin{enumerate}
+\item[Associative] $(st)A=s(tA)\ ,(s,t \in R)$
+\item[Distributive] $s(A+B)=sA+sB$ or $(s+t)A=sA+tA$ ,$(s \in R)$
+\end{enumerate}
+
+\subsection{Zero Matrices}
+\subsubsection{Definitions}
+A \textbf{zero matrix} with all zero entries, denoted by $O$(any size) or $O_{m \times n}$.
+\subsubsection{Properties}
+\begin{enumerate}
+\item $A = O + A, \forall A \in M_{m \times n}$
+\item $0 \cdot A = O, \forall A \in M_{m \times n}$
+\end{enumerate}
+
+\subsection{Matrix Substraction}
+\subsubsection{Definitions}
+We define the matrix $-A$ to be $-1(A)$. The matrix substraction of the two matrix $A$ and $B$ is define to be as
+$$A-B = A+(-B)$$
+\subsubsection{Theorem}
+\begin{enumerate}
+\item $A-A = O, \forall A \in M_{m \times n}$
+\end{enumerate}
+
+\subsection{Matrix Transpose}
+\subsubsection{Definitions}
+The transpose of a $m \times n$ matrix $A$ is the $n \times m$ matrix $A^T$ whose $(i,j)-enrty$ is the $(j,i)-enrty$ of $A.$ 
+\subsubsection{Properties}
+$$A \in M_{m \times n} \Rightarrow A^T \in M_{n \times m}$$
+\subsubsection{Theorem}
+\begin{enumerate}
+\item[associative] $(sA)^T=s(A^T)\ ,\forall s \in R$
+\item[Distributive] $(A+B)^T=A^T+B^T$
+\item[] $(A^T)^T=A$
+\end{enumerate}
+
+\section{Vector}
+\subsection{Definitions}
+Vector can refer to either a \textbf{row vector} or a \textbf{column vector}.\\
+Row vector is a matrix with \textbf{one} row.
+$$\underline{v}=[a_1,\cdots,a_n]$$
+Column vector is a matrix with \textbf{one} column.
+\begin{equation}
+	\underline{v}=
+	\left[
+	\begin{array}{c}
+	a_1 \\
+	\vdots \\
+	a_m
+	\end{array}
+	\right]
+	\ or\ \underline{v}^T=[a_1,\cdots,a_m]
+\end{equation}
+So row vector can transpose to column vector, vice versa.\\
+\subsection{Notation}
+\begin{equation}
+	\underline{v}=
+	\left[
+	\begin{array}{c}
+	a_1 \\
+	\vdots \\
+	a_n
+	\end{array}
+	\right]
+	= [a_i] \in R^n , \forall i = 1,\cdots,n
+\end{equation}
+We denote the set of all column vectors with $n$ components by $R^n$. That is $R^n = M_{n \times 1}.$
+
+\subsection{Vector Addition/Substraction, Scalar Multiplication and Zero Vector}
+Follow those for matrices.\\
+
+Zero Vector is denoted \begin{large}$\textbf{0}$\end{large}\\\\
+A matrix is often regarded as a stack of row vectors or a cross list of column vectors.\\
+Let $C \in M_{m \times n}$\\
+$$C = [\underline{c_1},\ \cdots\ ,\underline{c_j},\ \cdots\ ,\underline{c_n}]$$
+\begin{equation}
+	\underline{c_j}=
+	\left[
+	\begin{array}{c}
+	c_{1j} \\
+	\vdots \\
+	c_{mj}
+	\end{array}
+	\right]
+	= [c_i] \in R^m , \forall i = 1,\cdots,m
+\end{equation}
+
+\section{Linear Combinations}
+\subsection{Definitions}
+A linear combination of vectors $\underline{u_1},\ \cdots\ , \underline{u_n}$ is a vector of the form
+$$\underline{u}=c_1\underline{u_1} + \cdots + c_n\underline{u_n}$$
+Where $c_1\ ,\cdots\ ,c_n$ are scalars which called \textbf{coefficients} of the linear combination.
+\subsection{Samples}
+\subsubsection{Given coefficients, computes linear combination}
+Let $\underline{u_1}^T=[-1,-3,4]$, $\underline{u_2}^T=[-4,1,2]$, $c_1=3$ and $c_2=2$
+
+\begin{equation}
+Then\ 
+c_1\underline{u_1}^T + c_2\underline{u_2}^T = 
+\left[
+\begin{array}{ccc}
+-3 & -9 & 12
+\end{array}
+\right] +
+\left[
+\begin{array}{ccc}
+-12 & 3 & 6
+\end{array}
+\right]
+= 
+\left[
+\begin{array}{ccc}
+-15 & -6 & 18
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+\because\ c_1\underline{u_1}^T + c_2\underline{u_2}^T = (c_1\underline{u_1} + c_2\underline{u_2})^T
+\end{equation}
+\begin{equation}
+\therefore\ c_1\underline{u_1} + c_2\underline{u_2} = 
+\left[
+\begin{array}{c}
+-15 \\
+-6 \\
+18
+\end{array}
+\right]
+\end{equation}
+\subsubsection{Given linear combination, computes coefficients}
+Which could be transform to solve a system of linear equations. But there are three solution.\\
+\begin{enumerate}
+\item[] Unique solution when $s\underline{c_1}$ and $\underline{c_2}$ are not \textbf{collinear vectors}.
+\item[] Infinitely many solutions when $s\underline{c_1},\ \underline{c_2}$ are \textbf{collinear vectors} and $\underline{c}=s\underline{c_1},\ \underline{c}$ is linear combination
+\item[] No solutions when  $s\underline{c_1},\ \underline{c_2}$ are \textbf{collinear vectors} and $\underline{c}\neq s\underline{c_1},\ \underline{c}$ is linear combination
+\end{enumerate}
+
+\subsection{Parallel/Collinear Vectors}
+Let $\underline{a}$ and $\underline{b}$ not be in zero vector. We define $\underline{a}$ is parallel with $\underline{b}$ when $s\underline{a} = \underline{b}\ ,s \in R$.\\
+\subsubsection{Notations}
+Let $\forall \underline{a},\underline{b} \notin R^n$\\
+
+Then $\underline{a} \parallel \underline{b} \Rightarrow s\underline{a} = \underline{b}\ ,s \in R$\\\\
+$\underline{a} \parallel \underline{b}$ denotes the vectors $\underline{a}$, $\underline{b}$ are the parallel or collinear vector\\
+
+\section{Standard Vectors}
+\subsection{Definitions}
+The standard vectors of $R^n$ are defined as
+\begin{equation}
+\underline{e_1} = \left[
+\begin{array}{c}
+1\\
+0\\
+\vdots\\
+0
+\end{array}
+\right]\ 
+\underline{e_2} = \left[
+\begin{array}{c}
+0\\
+1\\
+\vdots\\
+0
+\end{array}
+\right]\ \cdots \ 
+\underline{e_n} = \left[
+\begin{array}{c}
+0\\
+0\\
+\vdots\\
+1
+\end{array}
+\right]\ 
+\end{equation}
+\subsection{Properties}
+Every vector in $R^n$ may be uniquely linearly combined by standard vectors.
+
+\section{Matrix-Vector Product}
+\subsection{Definitions}
+Let $A$ be an $m \times n$ matrix and $\underline{v}$ be an $n \times 1$ vector. We define the \textbf{matrix-vector product} of $A$ and $\underline{v}$, denoted by $A\underline{v}$, to be the linear combination of the columns of $A$ whose coefficients are the corresponding components of $\underline{v}$. That is 
+$$A\underline{v} = v_1\underline{a_1} + v_2\underline{a_2} + \cdots + v_n\underline{a_n}$$
+\subsection{Cautions}
+\begin{enumerate}
+\item the size of $\underline{v}$ must be equal to the count of columns of $A$.
+\item the solution of matrix-vector product is a new vector whose size is same with the count of rows of $A$.
+\end{enumerate}
+\subsection{Theorems}
+\begin{enumerate}
+\item[Distributive] $A(\underline{u}+\underline{v})=A\underline{u}+A\underline{v}$ and $(A+B)\underline{u}=A\underline{u}+B\underline{u}$
+\item[Associative] $A(c\underline{u})=c(A\underline{u})=(cA)\underline{u},\ \forall\ c \in R$
+\item[] $A\underline{0}=\underline{0}\ and\ O\underline{v}=\underline{0}\ , \forall A\ \in M_{m \times n}\ and\ \underline{v} \in R^n$
+\item[] $A\underline{e_j} = \underline{a_j}\ ,\ A = [\underline{a_1}\ \cdots\ \underline{a_m}]$
+\item[] $\ B\underline{w}=A\underline{w} \Rightarrow A=B\ ,\ \forall\ B,A \in M_{m \times n}\ and\ \forall\ \underline{w} \in R^n.$ 
+\end{enumerate}
+
+\section{Identity Matrix}
+\subsection{Definitions}
+For each positive integer $n$, the $n \times n$ \textbf{identity matrix} $I_n$ is the  $n \times n$ matrix whose respective columns are the standard vectors $\underline{e_1},\ \underline{e_2},\ \cdots\ ,\underline{e_n}$ in $R^n$\\
+Sometime $I_n$ is simply written as $I$.
+\subsection{Sample}
+\begin{equation}
+I_4 = \left[
+\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}
+\right]
+\end{equation}
+\subsection{Properties}
+$$I_n\underline{v} = \underline{v}\ ,\forall\ \underline{v} \in R^n$$
+
+\section{Stochastic Matrix}
+\subsection{Definitions}
+An matrix $A \in M_{m \times n}$ is called a stochastic matrix if all entries of $A$ is nonnegative and the sum of all entries in each columns is unity.
+
+\end{document}
