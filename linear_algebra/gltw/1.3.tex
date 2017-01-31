@@ -1,0 +1,314 @@
+\documentclass[14pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{CJKutf8}
+
+
+\begin{document}
+\tableofcontents
+\title{System of Linear Equations}
+\author{fsjohnhuang}
+\date{\today}
+\maketitle
+
+\begin{CJK}{UTF8}{min}
+\section{System of Linear Equations}
+\begin{equation}
+\left\lbrace 
+\begin{array}{c}
+2x+3y=5 \\
+ x+y=2 
+\end{array}\right.
+\end{equation}
+We call $2x+3y=5$ is \textbf{a linear equation}, and the group of linear equations above is called \textbf{a system of linear equations}. $x$, $y$ and $z$ are \textbf{variables}.
+\subsection{Definitions of Linear Equation}
+$$a_1x_1 + a_2x_2+ \cdots + a_nx_n=b$$
+We call from $a_1$, $a_2$ to $a_n$ as \textbf{coefficients}, from $x_1$, $x_2$ to $x_n$ as \textbf{variables}, and $b$ as \textbf{constant term}.
+\subsection{Solution of A System of Linear Equations}
+A solution of a system of linear equations in the variables $x_1$, $x_2$, $\cdots$, $x_n$ is a vector $[s_1\ s_2\ \cdots \ s_n]^T \in R^n$ such that every equation in the system is satisfied when each $x_i$ is replaced by $s_i$.
+\subsection{Solution Set}
+The set of all solutions of a system of linear equations is called the \textbf{solution set}.
+\begin{equation}
+Solution\ Set=\left\lbrace
+\left.
+\left[
+\begin{array}{c}
+x_1\\
+x_2\\
+\vdots \\
+x_n
+\end{array}
+\right]
+\in R^n
+\right|
+x_1,x_2,\cdots,x_n\ satisfy\ the\ system\ of\ linear\ equations
+\right\rbrace
+\end{equation}
+\paragraph{}
+Every system of linear equations has \textbf{no solution}, \textbf{exactly one solution}, or \textbf{infinitely many solutions}.
+\paragraph{}
+A system of linear equations is called \textbf{consistent} if it has one or more solutions.
+\paragraph{}
+A system of linear equations is called \textbf{inconsistent} if it has no solutions, denoted as $\emptyset$ or $\lbrace\rbrace$.
+\subsubsection{Sample}
+\begin{equation}
+R^2=
+\left\lbrace
+\left.
+\left[
+\begin{array}{c}
+x\\y
+\end{array}
+\right]
+\right|
+x \in R,\ y \in R
+\right\rbrace
+\end{equation}
+Subset of $R^2$, denoted $L_1$
+\begin{equation}
+L_1=
+\left\lbrace
+\left.
+\left[
+\begin{array}{c}
+x\\y
+\end{array}
+\right]
+\right|
+x \in R,\ y \in R,\ x-y=1
+\right\rbrace
+\end{equation}
+
+
+\subsection{Equality of System of Linear Equations}
+Two systems of linear equations are called \textbf{equivalent} if they have exactly the same solution set.
+
+\subsection{Elementary Row Operations}
+Simple operations defined on a system of linear equations that do not change the solution set of the system of linear equations.\\
+Used for solving systems of linear equations.\\
+
+Three types of elementary row operations.
+\begin{enumerate}
+\item Interchange
+\item Scaling
+\item Row addition
+\end{enumerate}
+
+\subsection{Augmented Matrix}
+In general a system of linear equations could be rewritten as 
+$$A\underline{x}=\underline{b}$$
+\begin{equation}
+where\ A = \left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{m1} & \cdots & a_{mn}
+\end{array}
+\right],\ 
+\underline{x} =\left[
+\begin{array}{c}
+x_{1}\\
+\vdots\\
+x_{n}
+\end{array}
+\right],\ 
+\underline{b} =\left[
+\begin{array}{c}
+b_{1}\\
+\vdots\\
+b_{m}
+\end{array}
+\right]
+\end{equation}
+We call $A$ as \textbf{coefficient matrix}, $\underline{x}$ as \textbf{variable vector} and $\underline{b}$ as \textbf{constant vector}.\\\\
+The matrix of size $m \times (n+1)$
+\begin{equation}
+[\ A\ |\ \underline{b}\ ] = \left[
+\begin{array}{cccc}
+a_{11} & \cdots & a_{1n} & b_1 \\
+\vdots & \ddots & \vdots & \vdots\\
+a_{m1} & \cdots & a_{mn} & b_m \\
+\end{array}
+\right]
+\end{equation}
+is called the \textbf{augmented matrix}.
+\subsubsection{Elementary Row Operations}
+\paragraph{}
+Elementary row operations taken on systems of linear equations as well as on the corresponding augmented matrices.
+\paragraph{Three types of elementary row operations.}
+\begin{enumerate}
+\item[Interchange] interchange any two rows of the matrix.
+\item[Scaling] multiply every entry of some row of the matrix by the same \textbf{nonzero scalar}.
+\item[Row Addition] add a multiple of one row of the matrix to another row.
+\end{enumerate}
+\paragraph{Properties}
+\begin{enumerate}
+\item Every elementary row operations are reversible.
+\item $[\ A\ |\ \underline{b}\ ] \Leftarrow elementary\ row\ operations \Rightarrow [\ A'\ |\ \underline{b'}\ ]$
+\end{enumerate}
+
+\subsubsection{Row Echelon Form of Matrix}
+\paragraph{Definition}
+A matrix is said to be in row echelon form if it satisfies the following three conditions:
+\begin{enumerate}
+\item Each nonzero row lies above every zero row.
+\item The leading entry of a nonzero row lies in a column to the right of the column containing the leading entry of \textbf{and preceding row}.
+\item If a column contains the leading entry of some row, then all entries of the column below the leading entry are $0$.
+\end{enumerate}
+\paragraph{Sample}
+\begin{equation}
+\left[
+\begin{array}{cccc}
+2 & * & * & 5\\
+0 & 0 & 1 & 2\\
+0 & 0 & 0 & 0
+\end{array}
+\right]
+\end{equation}
+
+\subsubsection{Reduced Row Echelon Form of Matrix}
+\paragraph{Definition}
+A matrix is said to be in reduced row echelon form if it satisfies the following three conditions:
+\begin{enumerate}
+\item It's in row echelon form.
+\item If a column contains the leading entry of some row, then all entries of the column are $0$.
+\item The leading entry of each nonzero row is $1$.
+\end{enumerate}
+\paragraph{Sample}
+\begin{equation}
+\left[
+\begin{array}{cccc}
+2 & * & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}
+\right]
+\end{equation}
+\paragraph{Solution Set}
+There is a augmented matrix below:
+\begin{equation}
+\left[
+\begin{array}{cccccc}
+1 & -3 & 0 & 2 & 0 & 7 \\ 
+0 & 0 & 1 & 6 & 0 & 9 \\
+0 & 0 & 0 & 0 & 1 & 2 \\
+0 & 0 & 0 & 0 & 0 & 0
+\end{array}
+\right]
+\end{equation}
+We call the coressponding variable as \textbf{basic variable} if the column contains the leading entry of some row. Otherwise we call the coressponding variable as \textbf{free variable}. Free variable could be any real value. And basic variable is according to free variable.\\\\
+In this case, $x_1$, $x_3$ and $x_5$ are basic variable; $x_2$ and $x_4$ are free variable.
+\begin{equation}
+\begin{array}{l}
+x_1=7+3x_2-2x_4 \\
+x_2\ free \\
+x_3=9-6x_4\\
+x_4\ free\\
+x_5=2
+\end{array}
+\end{equation}
+General Solution:
+\begin{equation}
+\left[
+\begin{array}{c}
+x_1\\
+x_2\\
+x_3\\
+x_4\\
+x_5
+\end{array}
+\right]=
+\left[
+\begin{array}{c}
+7\\
+0\\
+9\\
+0\\
+2
+\end{array}
+\right]
++
+\left[
+\begin{array}{c}
+3\\
+1\\
+0\\
+0\\
+0
+\end{array}
+\right]\underline{x_2}
++
+\left[
+\begin{array}{c}
+-2\\
+0\\
+-6\\
+1\\
+0
+\end{array}
+\right]\underline{x_4}
+\end{equation}
+
+\paragraph{Unique Solution}
+No free variables.
+\paragraph{Infinitely Many Solutions}
+Has free variables.
+\paragraph{No Solution}
+Whenever an agumented matrix contains a row in which the only nonzero entry lies in the last column, the corresponding system of linear equations has no solution.
+\paragraph{Theorem}
+Every matrix can be transformed into \textbf{one and only one} in reduced row echelon form by means of a sequence of elementary row operations.
+
+\subsubsection{Ganssian Elimination}
+Ganssian elimination is an algorithm for finding a (actually "the") reduced row echelon form of a matrix.
+There are 6 steps:
+\begin{enumerate}
+\item Determine the \textbf{leftmost nonzero column}. This is a \textbf{pivot column}, and the \textbf{topmost position}($1^st$ row) in this column is a \textbf{pivot position}.
+\begin{equation}
+[\ A\ |\ \underline{b}\ ]=\left[
+\begin{array}{ccc}
+0 & 0 & 2\\
+0 & 1 & -1\\
+0 & 6 & 0
+\end{array}
+\right|\left.
+\begin{array}{c}
+5\\
+-1\\
+7
+\end{array}
+\right]
+\end{equation}
+$[\ 0\ 1\ 6\ ]^T$ is pivot column, and the topmost entry $0$ is pivot position.
+\item In the pivot column, choose any nonzero entry in a row that is not ignored, and perform the approriate \textbf{row interchange} to bring this entry into the pivot position.
+\item Add an appropriate multiple of the row containing the pivot position to each lower row in order to change each entry below to pivot position into zero.
+\item Ignore the row that contains the pivot position. If there is a nonzero row that is not ignored, repeat steps 1-4 on the submatrix that remains.
+\item If the leading entry of the row is not 1, perform appropriate scaling operation to make it 1. Then add an appropriate multiple of this row to every preceding row to change each entry above the pivot position into zero.
+\item If step 5 was performed using the first row, stop. Otherwise, repeat step 5 on the preceding row.
+\end{enumerate}
+steps 1-4 is forward pass which would transform a matrix from original form to row echelon form;\\
+steps 5-6 is backward pass which would transform a matrix from row echelon form to reduced row echelon form.\\
+
+\subsubsection{Rank and Nullity}
+\paragraph{Definite}
+\begin{enumerate}
+\item The \textbf{rank} of an $m \times n$ matrix $A$, denoted by $rank\ A$, is defined to be the number of nonzero rows in the reduced row echelon form of $A$.
+\item The \textbf{nullity} of $A$, denoted by $nullity\ A$, is defined to be $n - rank\ A$ ($n$ is column count).
+\end{enumerate}
+\paragraph{Interpretations}
+\begin{enumerate}
+\item The \textbf{rank} of $[\ A\ \underline{b}\ ]$ is the number of "useful" equations in the system of linear equations $A\underline{x}=\underline{b}$.
+\item The \textbf{rank} of $A$ represents the number of \textbf{basic variables} while the \textbf{nullity} of $A$ is the number of \textbf{free variables}.
+\end{enumerate}
+Cautions: $rank\ A$ is not as same as $rank\ [\ A\ |\ b\ ]$ all the time.
+\subsubsection{Theorem}
+Let $A \in M_{m \times n}$ and $\underline{b} \in R^m$. Then the following conditions are equivalent:
+\begin{enumerate}
+\item The matrix equation $A\underline{x}=\underline{b}$ is consistent.
+\item The vector $\underline{b}$ is a linear combination of the columns of $A$.
+\item The reduced row echelon form of the augmented matrix $[\ A\ \underline{b}\ ]$ has no row of the form $[\ 0\ 0\ \cdots \ d\ ]$ where $d \neq 0$.
+\item The rank of the coefficient matrix is equal to the rank of the augumented matrix, i.e., $rank\ A = rank\ [\ A\ \underline{b}\ ]$.
+\end{enumerate}
+
+
+\end{CJK}
+\end{document}

@@ -1,0 +1,31 @@
+\contentsline {section}{\numberline {1}System of Linear Equations}{2}
+\contentsline {subsection}{\numberline {1.1}Definitions of Linear Equation}{2}
+\contentsline {subsection}{\numberline {1.2}Solution of A System of Linear Equations}{2}
+\contentsline {subsection}{\numberline {1.3}Solution Set}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {subsubsection}{\numberline {1.3.1}Sample}{2}
+\contentsline {subsection}{\numberline {1.4}Equality of System of Linear Equations}{3}
+\contentsline {subsection}{\numberline {1.5}Elementary Row Operations}{3}
+\contentsline {subsection}{\numberline {1.6}Augmented Matrix}{3}
+\contentsline {subsubsection}{\numberline {1.6.1}Elementary Row Operations}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {paragraph}{Three types of elementary row operations.}{3}
+\contentsline {paragraph}{Properties}{3}
+\contentsline {subsubsection}{\numberline {1.6.2}Row Echelon Form of Matrix}{4}
+\contentsline {paragraph}{Definition}{4}
+\contentsline {paragraph}{Sample}{4}
+\contentsline {subsubsection}{\numberline {1.6.3}Reduced Row Echelon Form of Matrix}{4}
+\contentsline {paragraph}{Definition}{4}
+\contentsline {paragraph}{Sample}{4}
+\contentsline {paragraph}{Solution Set}{4}
+\contentsline {paragraph}{Unique Solution}{5}
+\contentsline {paragraph}{Infinitely Many Solutions}{5}
+\contentsline {paragraph}{No Solution}{5}
+\contentsline {paragraph}{Theorem}{5}
+\contentsline {subsubsection}{\numberline {1.6.4}Ganssian Elimination}{5}
+\contentsline {subsubsection}{\numberline {1.6.5}Rank and Nullity}{5}
+\contentsline {paragraph}{Definite}{5}
+\contentsline {paragraph}{Interpretations}{6}
+\contentsline {subsubsection}{\numberline {1.6.6}Theorem}{6}
