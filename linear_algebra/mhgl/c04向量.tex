@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{CJKutf8}
+
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}
+\section{向量的意思}
+向量也是一种矩阵.分别有四种意思：
+\begin{itemize}
+\item 平面坐标中的点
+\item 从坐标原点$(0, 0)$出发到某个对应点的箭头
+\item 多个箭头之和
+\item 不以坐标原点出发到某个对应点的箭头
+\end{itemize}
+\paragraph{向量表示点，线，面}
+\begin{equation}
+\text{y轴上的点表示为：}\ c\left[\begin{array}{c}
+0\\
+1
+\end{array}\right]|\ \forall c \in R
+\end{equation}
+\begin{equation}
+\text{y轴表示为：}\ \left\lbrace \left. c\left[\begin{array}{c}
+0\\
+1
+\end{array}\right]\right|\ \forall c \in R \right\rbrace
+\end{equation}
+\begin{equation}
+\text{xy平面表示为：}\ \left\lbrace \left. c_1\left[\begin{array}{c}
+0\\
+1
+\end{array}\right]+c_2\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]\right|\ \forall c_1,c_2 \in R \right\rbrace
+\text{或}
+\ \left\lbrace \left. c_1\left[\begin{array}{c}
+3\\
+1
+\end{array}\right]+c_2\left[\begin{array}{c}
+1\\
+2
+\end{array}\right]\right|\ \forall c_1,c_2 \in R \right\rbrace
+\end{equation}
+\section{向量的乘法}
+\begin{equation}
+\left[
+\begin{array}{cc}
+x_{11} & x_{12}
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+y_{11} \\
+y_{21}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c}
+x_{11}y_{11}+x_{12}y_{21}
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+\left[
+\begin{array}{c}
+x_{11} \\
+x_{21}
+\end{array}
+\right]
+\left[
+\begin{array}{cc}
+y_{11} & y_{12}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{cc}
+x_{11}y_{11} & x_{11}y_{12} \\
+x_{21}y_{11} & x_{21}y_{12} 
+\end{array}
+\right]
+\end{equation}
+和矩阵乘法一样不遵循乘法交换率．
+\section{线性相关，线性无关}
+对于下面方程式组
+\begin{equation}
+\left[
+\begin{array}{c}
+0\\\vdots\\0
+\end{array}
+\right]=c_1\left[
+\begin{array}{c}
+a_{11}\\\vdots\\a_{m1}
+\end{array}
+\right]
++\cdots+
+c_n\left[
+\begin{array}{c}
+a_{1n}\\\vdots\\a_{mn}
+\end{array}
+\right]
+\end{equation}
+若$[c_1 \cdots c_n]^T$有且仅有一个解时，则称向量$[a_{11} \cdots a_{1n}]^T$到向量$[a_{11} \cdots a_{1n}]^T$为线性无关（线性独立）；否则称为线性相关．
+\section{线性子空间}
+若集合$R^n$的子集$W$符合以下两个条件，那么称集合$W$是集合$R^n$的\textbf{线性子空间}，简称\textbf{子空间}．
+\begin{enumerate}
+\item $[a_1\cdots a_n]^T\in W \Rightarrow c[a_1\cdots a_n]^T\in W\ |\ \forall c \in R$
+\item $[a_1\cdots a_n]^T, [b_1\cdots b_n]^T\in W \Rightarrow [a_1+b_1\cdots a_n+b_n]^T\in W$
+\end{enumerate}
+具体就是\textbf{通过原点的线}和\textbf{通过原点的面}等，总之就是\textbf{通过原点}.
+\paragraph{由向量空间生成的子空间}
+\begin{equation}
+C=\lbrace c_1[a_{11}\cdots a_{m1}]^T + \cdots + c_n[a_{1n}\cdots a_{mn}]^T\ |\ \forall c_1,\cdots,c_n \in R,\ [a_{11}\cdots a_{m1}]^T,\cdots,[a_{1n}\cdots a_{mn}]^T \in R^m\rbrace
+\end{equation}
+集合$C$就是由向量$[a_{11}\cdots a_{m1}]^T$到$a_{1n}\cdots a_{mn}]^T$生成的子空间．
+\subsection{基，维度}
+假设集合$W$为$R^m$的子空间，若满足以下三个条件：
+\begin{enumerate}
+\item $[a_{11} \cdots a_{m1}]^T, \cdots, [a_{1n} \cdots a_{mn}]^T \in R^m$
+\item $[a_{11} \cdots a_{m1}]^T, \cdots, [a_{1n} \cdots a_{mn}]^T$为线性无关向量
+\item $W=\lbrace c_1[a_{11} \cdots a_{m1}]^T + \cdots + c_n[a_{1n} \cdots a_{mn}]^T\ |\ \forall c_1,\cdots,c_n\in R \rbrace$
+\end{enumerate}
+那么我们称集合$\lbrace [a_{11} \cdots a_{m1}]^T, \cdots ,[a_{1n} \cdots a_{mn}]^T \rbrace$为＂子空间$W$的基＂，而基的元素个数$n$称为＂子空间$W$的维度＂，表示为$dimW$．
+\subsubsection{事例}
+定义$xy$平面为$W$，而$W$为$R^3$的子空间．向量$[3\ 1\ 0]^T$和$[1\ 2\ 0]^T$属于$R^3$，且为线性无关向量．\\显然$W=\lbrace c_1[3\ 1\ 0]^T  + c_2[1\ 2\ 0]^T\ |\ \forall c_1,\cdots,c_2\in R \rbrace$，因此集合$\lbrace [3\ 1\ 0]^T, [1\ 2\ 0]^T \rbrace$为＂子空间$W$的基＂，$dimW$为$2$．
+
+
+
+\end{CJK}
+\end{document}

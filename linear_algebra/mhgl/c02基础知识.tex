@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{CJKutf8}
+\usepackage{fullpage}
+
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}
+\section{数的分类}
+\begin{itemize}
+\item[\textbf{复数}] 形如$\lbrace a+bi$ $|\ \forall a,\ b \in \text{实数},\ i\text{为虚数单位，定义为}i^2=-i\ \rbrace$．\\复数包含实数和纯虚数．
+	\begin{itemize}
+	\item[\textbf{实数}]　包含有理数(可以用$\dfrac{q}{p}$表示，其中$p\neq 0$且$q$为整数)和无理数
+		\begin{itemize}
+		\item[\textbf{整数有理数}] 正整数，$0$和负整数
+		\item[\textbf{非整数有理数}] 有限小数(如$0.3$)和无限循环小数(如$0.333\dots$)
+		\item[\textbf{无理数}] 无限不循环小数(如$\pi\text{和}\sqrt{2}$)
+		\end{itemize}
+	\item[\textbf{纯虚数}]　形如$\lbrace\ bi\ |\ b\text{为非零实数}\  \rbrace$
+	\end{itemize}
+\end{itemize}
+\paragraph{虚数单位$i$的理解:}
+$$x^2+5=0 \Rightarrow x^2-(-5)=0 \Rightarrow (x+\sqrt{5}i)(x-\sqrt{5}i)=0$$
+$i$就是为形如$x^2+5=0$的方程而设想出来的数．上述方程中当$i^2=-1$时有解．
+
+\section{命题}
+可以判断其正确与否，且判断结果不随个人而改变的主张．\\
+\paragraph{事例}
+\begin{itemize}
+\item[命题] 肥仔John是男的
+\item[非命题] 肥仔John很健谈
+\end{itemize}
+
+\section{必要条件和充分条件}
+如果$P$成立，那么$Q$就成立．那么$Q$为$P$的必要条件，而$P$为$Q$的充分条件．\\
+数学符号为：
+$$P \Rightarrow Q$$
+如果$P$成立，那么$Q$就成立；如果$Q$成立，那么$P$就成立；这两个命题均正确，那么$P$与$Q$互为充分必要条件．\\
+数学符号为：
+$$P \Leftrightarrow Q$$
+
+\section{集合}
+集合，就是某类事物的聚集在一起；\\
+元素，构成集合的各个事物．\\
+数学符号为：
+$$X = \lbrace 2,4,6 \rbrace\ \text{或}\ X = \lbrace 2n|n=1,2,3 \rbrace$$
+若$x$为集合$X$的元素时，表示为：$x \in X$
+\subsection{子集}
+若集合$X$的所有元素都属于集合$Y$时，那么集合$X$为集合$Y$的子集．\\
+数学符号为：
+$$X \subset Y$$
+
+\section{映射}
+\textbf{从集合$X$到集合$Y$的映射}，就是使集合$X$的元素与集合$Y$的元素相对应的规则．\\
+数学符号为：
+$$X\overrightarrow{\ \ f\ \ }Y\ \text{或}\ f: X\longrightarrow Y$$
+注意：映射使得定义域不变时，必定对应相同值域；不会出现定义域不变时，值域产生变化．
+\subsection{像}
+把通过映射$f$，与集合$X$的元素$x_i$相对应的集合$Y$的元素称为\textbf{$x_i$通过映射$f$形成的像}．\\
+数学符号表示为：$$f(x_i)$$
+\paragraph{}
+事例：
+$$f(x)=2x-1$$
+意思是
+\begin{itemize}
+\item 映射$f$是使集合$Y$的元素$2x-1$与集合$X$的元素$x$相对应的规则．
+\item 集合$X$的元素$x$通过映射$f$在集合$Y$中形成的像是$2x-1$.
+\end{itemize}
+\subsection{值域和定义域}
+把通过映射$f$形成的像的集合称为\textbf{映射$f$的值域}．\\
+与映射$f$的值域相对应的集合$X$称为\textbf{映射$f$的定义域}．
+\subsection{满射，单射和满单射}
+\paragraph{满射}
+映射$f$的值域等于集合$Y$，那么映射$f$是满射，也称为向上映射．
+\paragraph{单射}
+若$x_i \neq x_j$，则$f(x_i) \neq f(x_j)$，那么映射$f$是单射，也称为一对一的映射．
+\paragraph{满单射}
+既满足满射，又满足单射则是满单射，也称为双射．
+\subsection{逆映射}
+若映射$f$和映射$g$满足以下两个条件，那么\textbf{映射$g$是映射$f$的逆映射}．\\
+数学表示：
+$$X \overrightarrow{\ \ f^{-1}\ \ }Y\ \text{或}\ f^{-1}:X\rightarrow Y$$
+定理：
+$$\text{与映射f对应的逆映射存在}\Leftrightarrow\text{映射f为满单射}$$
+\subsection{线性映射}
+假设$x_i$和$x_j$为集合$X$的任意元素，$c$为任意实数，$f$为从集合$X$到集合$Y$的映射．若映射$f$满足以下两个条件，那么\textbf{映射$f$是从集合$X$到集合$Y$的线性映射}．
+\begin{itemize}
+\item $f(x_i)+f(x_j) = f(x_i+x_j)$
+\item $cf(x_i)=f(cx_i)$
+\end{itemize}
+
+\section{排列组合}
+\paragraph{组合的个数}
+从$n$个中挑选$r$个的个数．一般表示为$C_n^r$．
+$$C_n^r=\dfrac{n\times(n-1)\times\cdots\times(n-(r-1))}{r\times(r-1)\times\cdots\times 1}$$
+$$=\dfrac{n\times(n-1)\times\cdots\times(n-(r-1))}{r\times(r-1)\times\cdots\times 1}\times\dfrac{(n-r)\times(n-(r+1))\times\cdots\times 1}{(n-r)\times(n-(r+1))\times\cdots\times 1}$$
+$$=\dfrac{n!}{r!\times(n-r)!}$$
+\paragraph{排列的个数}
+从$n$个中挑选$r$个事物，然后再将选好的$r$个事物按照顺序排列的种数．一般表示为$P_n^r$．
+$$P_n^r=r!\times C_n^r$$
+
+\end{CJK}
+\end{document}

@@ -1,0 +1,357 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{CJKutf8}
+
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}
+\section{矩阵}
+用处清晰表示一次方程组．
+\subsection{乘法}
+$m \times n$矩阵与$n \times p$矩阵相乘：
+\begin{equation}
+\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n} \\
+\vdots & \ddots & \vdots \\
+a_{m1} & \cdots & a_{mn} 
+\end{array}
+\right]
+\left[
+\begin{array}{ccc}
+b_{11} & \cdots & b_{1p} \\
+\vdots & \ddots & \vdots \\
+b_{n1} & \cdots & b_{np} 
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+=
+\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n} \\
+\vdots & \ddots & \vdots \\
+a_{m1} & \cdots & a_{mn} 
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+b_{11} \\
+\vdots \\
+b_{n1}
+\end{array}
+\right]
+\cdots
+\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n} \\
+\vdots & \ddots & \vdots \\
+a_{m1} & \cdots & a_{mn} 
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+b_{1p} \\
+\vdots \\
+b_{np}
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+=\left[
+\begin{array}{ccc}
+a_{11}\times b_{11}+\cdots+a_{1n}\times b_{n1} & \cdots & a_{11}\times b_{1p}+\cdots+a_{1n}\times b_{np} \\
+\vdots & \ddots & \vdots \\
+a_{m1}\times b_{11}+\cdots+a_{mn}\times b_{n1} & \cdots & a_{m1}\times b_{1p}+\cdots+a_{mn}\times b_{np}
+\end{array}
+\right]
+\end{equation}
+\begin{itemize}
+\item 矩阵乘法拆解为矩阵向量乘法
+\item 只有当左边的矩阵的列数等于右边矩阵的行数时，两个矩阵才可以进行乘法运算
+\item 矩阵相乘不遵循乘法交换律
+\end{itemize}
+
+\subsection{次方}
+\begin{equation}
+\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n} \\
+\vdots & \ddots & \vdots \\
+a_{m1} & \cdots & a_{mn} 
+\end{array}
+\right]^n
+\end{equation}
+
+\subsection{转置矩阵}
+\begin{equation}
+\text{转置矩阵是指}m \times n\text{矩阵}
+\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n} \\
+\vdots & \ddots & \vdots \\
+a_{m1} & \cdots & a_{mn} 
+\end{array}
+\right]
+\text{的行和列交换后得到的}n \times m
+\text{矩阵}\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{m1} \\
+\vdots & \ddots & \vdots \\
+a_{1n} & \cdots & a_{mn} 
+\end{array}
+\right]\text{．}
+\end{equation}
+\begin{equation}
+m \times n\text{矩阵}\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n} \\
+\vdots & \ddots & \vdots \\
+a_{m1} & \cdots & a_{mn} 
+\end{array}
+\right]\text{的转置矩阵可以表示为}\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n} \\
+\vdots & \ddots & \vdots \\
+a_{m1} & \cdots & a_{mn} 
+\end{array}
+\right]^T
+\end{equation}
+
+\subsection{对角矩阵}
+对角矩阵就是除对角元素外的元素均为$0$的$n$阶方阵．如下对角矩阵可表示为$diag(1,2,3,4)$，diag是对角线diagonal的缩写．
+\begin{equation}
+\left[
+\begin{array}{cccc}
+1 & 0 & 0 & 0 \\
+0 & 2 & 0 & 0 \\
+0 & 0 & 3 & 0 \\
+0 & 0 & 0 & 4 \\
+\end{array}
+\right]
+\end{equation}
+
+\subsection{单位矩阵}
+单位矩阵就是对角元素均为$1$，其余元素均为$0$的$n$阶方阵，也就是$diag(1,\cdots,1)$．
+\paragraph{}
+单位矩阵与其他矩阵或向量相乘，不会产生任何变化．
+
+\section{逆矩阵}
+与$n$阶方阵$A$相乘的积等于单位矩阵的$n$阶方阵$B$，就是$A$的逆矩阵，表示为$A^{-1}$．即
+\begin{equation}
+\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n} \\
+\vdots & \ddots & \vdots \\
+a_{n1} & \cdots & a_{nn} 
+\end{array}
+\right]
+\left[
+\begin{array}{ccc}
+x_{11} & \cdots & x_{1n} \\
+\vdots & \ddots & \vdots \\
+x_{n1} & \cdots & x_{nn} 
+\end{array}
+\right]
+=
+\left[
+\begin{array}{ccc}
+1 & \cdots & 0 \\
+\vdots & \ddots & \vdots \\
+0 & \cdots & 1
+\end{array}
+\right]
+\end{equation}
+由于矩阵$A$存在对应的逆矩阵$B$，因此矩阵$A$被称为\textbf{可逆矩阵}．(并不是所有矩阵均为可逆矩阵)\\
+\textbf{＂原来的矩阵＂与＂逆矩阵＂相乘，遵循乘法交换律．}
+\subsection{逆矩阵的求解方式－高斯消元法}
+\paragraph{事例}
+\begin{equation}
+\left[
+\begin{array}{cc}
+3 & 1 \\
+1 & 2
+\end{array}
+\right]
+\left[
+\begin{array}{cc}
+x_{11} & x_{12} \\
+x_{21} & x_{22}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{cc}
+1 & 0 \\
+0 & 1
+\end{array}
+\right]
+\end{equation}
+求逆矩阵．
+解：
+\begin{equation}
+\text{分解为}
+\left[
+\begin{array}{cc}
+3 & 1 \\
+1 & 2
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_{11} \\
+x_{21}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{cc}
+1 \\
+0
+\end{array}
+\right]
+\text{和}
+\left[
+\begin{array}{cc}
+3 & 1 \\
+1 & 2
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_{12} \\
+x_{22}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{cc}
+0 \\
+1
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+\text{转换为augmented matrix}
+\left[
+\begin{array}{ccc}
+3 & 1 & 1\\
+1 & 2 & 0
+\end{array}
+\right]
+\text{和}
+\left[
+\begin{array}{ccc}
+3 & 1 & 0\\
+1 & 2 & 1
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+\text{合并}\left[
+\begin{array}{cccc}
+3 & 1 & 1 & 0 \\
+1 & 2 & 0 & 1
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+\text{高斯消元法后}\left[
+\begin{array}{cccc}
+1 & 0 & \dfrac{2}{5} & -\dfrac{1}{5} \\
+0 & 1 & -\dfrac{1}{5} & \dfrac{3}{5}
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+\text{逆矩阵为}\left[
+\begin{array}{cc}
+\dfrac{2}{5} & -\dfrac{1}{5} \\
+-\dfrac{1}{5} & \dfrac{3}{5}
+\end{array}
+\right]
+\end{equation}
+\subsection{2阶矩阵的逆矩阵求解方式}
+\begin{equation}
+\left[
+\begin{array}{cc}
+a_{11} & a_{12}\\
+a_{21} & a_{22}
+\end{array}
+\right]^{-1}
+=
+\dfrac{1}{a_{11}a_{22}-a_{12}a_{21}}
+\left[
+\begin{array}{cc}
+a_{22} & -a_{12}\\
+-a_{21} & a_{11}
+\end{array}
+\right]
+\end{equation}
+
+\subsection{行列式}
+用于确定$n$阶矩阵是否为可逆矩阵．
+\begin{equation}
+\text{矩阵}\left[
+\begin{array}{ccc}
+x_{11} & \cdots & x_{1n} \\
+\vdots & \ddots & \vdots \\
+x_{n1} & \cdots & x_{nn}
+\end{array}
+\right]\text{的行列式表示为}
+det\left[
+\begin{array}{ccc}
+x_{11} & \cdots & x_{1n} \\
+\vdots & \ddots & \vdots \\
+x_{n1} & \cdots & x_{nn}
+\end{array}
+\right] \text{或}
+\left|
+\begin{array}{ccc}
+x_{11} & \cdots & x_{1n} \\
+\vdots & \ddots & \vdots \\
+x_{n1} & \cdots & x_{nn}
+\end{array}
+\right|
+\end{equation}
+$det$是determinant（决定因子）的缩写．
+\paragraph{存在可逆矩阵的条件}
+\begin{equation}
+\left|
+\begin{array}{ccc}
+x_{11} & \cdots & x_{1n} \\
+\vdots & \ddots & \vdots \\
+x_{n1} & \cdots & x_{nn}
+\end{array}
+\right| \neq 0 \Rightarrow 
+\left[
+\begin{array}{ccc}
+x_{11} & \cdots & x_{1n} \\
+\vdots & \ddots & \vdots \\
+x_{n1} & \cdots & x_{nn}
+\end{array}
+\right]^{-1}\text{存在．}
+\end{equation}
+\paragraph{行列式的计算}
+\begin{equation}
+\left|
+\begin{array}{ccc}
+x_{11} & \cdots & x_{1n} \\
+\vdots & \ddots & \vdots \\
+x_{n1} & \cdots & x_{nn}
+\end{array}
+\right|
+\end{equation}
+$$
+=x_{11}x_{22}\cdots x_{nn} + x_{12}x_{23}\cdots x_{n1} + \cdots +x_{1n}x_{21}\cdots x_{n(n-1)}
+$$
+$$
+- x_{1n}x_{2(n-1)}\cdots x_{n1}
+- x_{1(n-1)}x_{2(n-2)}\cdots x_{nn}
+\cdots
+- x_{11}x_{2n}\cdots x_{n2}
+$$
+
+
+\end{CJK}
+\end{document}
