@@ -1,0 +1,599 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{CJKutf8}
+
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}
+\section{线性映射}
+假设$\forall [x_{1i} \cdots x_{ni}]^T,[x_{1j} \cdots x_{nj}]^T \in R^n$，当满足下面两个条件时，我们称$f$为\textbf{从$R^n$到$R^m$的映射}或\textbf{线性变换}或\textbf{一次变换}．
+\begin{itemize}
+\item $f\lbrace[x_{1i} \cdots x_{ni}]^T\rbrace + f\lbrace[x_{1j} \cdots x_{nj}]^T\rbrace = f\lbrace[x_{1i}+x{1j} \cdots x_{ni}+x_{nj}]^T\rbrace$
+\item $cf\lbrace[x_{1i} \cdots x_{ni}]^T\rbrace = f\lbrace c[x_{1i} \cdots x_{ni}]^T\rbrace$
+\end{itemize}
+而从$R^n$到$R^m$的映射$f$，实质上就是$M_{m \times n}$的矩阵．
+\begin{equation}
+\left[
+\begin{array}{c}
+y_{1}\\
+\vdots\\
+y_{m}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{m1} & \cdots & a_{mn}
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_{1}\\
+\vdots\\
+x_{n}
+\end{array}
+\right]
+\end{equation}
+\subsection{用途}
+\paragraph{缩放}
+假设$[x_1\ y_1]^T \in R^2$，现在沿$X$轴缩放$\alpha$倍，沿$Y$轴缩放$\beta$倍，得到$[x_2\ y_2]^T \in R^2$．
+\begin{equation}
+\left[
+\begin{array}{c}
+x_2\\
+y_2
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c}
+\alpha x_1\\
+\beta y_1
+\end{array}
+\right]
+=
+\left[
+\begin{array}{cc}
+\alpha & 0\\
+0 & \beta
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_1\\
+y_1
+\end{array}
+\right]
+\end{equation}
+
+\paragraph{旋转}
+前提知识
+\begin{itemize}
+\item $X$轴逆时针转$\theta$度
+\begin{equation}
+\left[
+\begin{array}{c}
+x_2\\
+y_2
+\end{array}
+\right]
+=
+\left[
+\begin{array}{cc}
+cos\theta & 0\\
+sin\theta & 0
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_1\\
+0
+\end{array}
+\right]
+\end{equation}
+\item $Y$轴逆时针转$\theta$度
+\begin{equation}
+\left[
+\begin{array}{c}
+x_2\\
+y_2
+\end{array}
+\right]
+=
+\left[
+\begin{array}{cc}
+0 & -sin\theta\\
+0 & cos\theta
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+0\\
+y_1
+\end{array}
+\right]
+\end{equation}
+\end{itemize}
+那么对于$\forall\ [x\ y]^T \in R^2$作旋转可采用以下公式
+\begin{equation}
+\left[
+\begin{array}{c}
+x_2\\
+y_2
+\end{array}
+\right]
+=
+\left[
+\begin{array}{cc}
+cos\theta & -sin\theta\\
+sin\theta & cos\theta
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_1\\
+y_1
+\end{array}
+\right]
+\end{equation}
+
+\paragraph{平移}
+假设$[x_1\ y_1]^T \in R^2$，现在沿$X$轴平移$\alpha$，沿$Y$轴平移$\beta$，得到$[x_2\ y_2]^T \in R^2$．
+\begin{equation}
+\left[
+\begin{array}{c}
+x_2\\
+y_2
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c}
+\alpha + x_1\\
+\beta + y_1
+\end{array}
+\right]
+=
+\left[
+\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_1\\
+y_1
+\end{array}
+\right]
++
+\left[
+\begin{array}{c}
+\alpha\\
+\beta
+\end{array}
+\right]
+\end{equation}
+上述等式并不是线性映射，于是通过\textbf{升维}来转换为线性映射的形式．
+\begin{equation}
+\left[
+\begin{array}{c}
+x_2\\
+y_2\\
+0
+\end{array}
+\right]
+=
+\left[
+\begin{array}{ccc}
+1 & 0 & \alpha\\
+0 & 1 & \beta\\
+0 & 0 & 1
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_1\\
+y_1\\
+0
+\end{array}
+\right]
+\end{equation}
+对于缩放，旋转，我们也可以通过升维的方式来统一它们的公式．
+\paragraph{透视投影}
+就是沿着通过一个点的直线，把$3$维空间的点投射为$2$维空间的点．其线性映射$f$固定为
+\begin{equation}
+\dfrac{1}{x_3-s_3}\left[
+\begin{array}{cccc}
+-s_3 & 0 & s_1 & 0\\
+0 & -s_3 & s_2 & 0\\
+0 & 0 & 0 & 0\\
+0 & 0 & 1 & -s_3
+\end{array}
+\right]
+\end{equation}
+\section{核}
+将映射到零向量的所有元素所属的集合称为\textbf{映射$f$的核}．
+\begin{equation}
+Kerf = \left\lbrace
+\left[
+\left.
+\begin{array}{c}
+x_1\\
+\vdots\\
+x_n
+\end{array}
+\right]
+\right|
+\left[
+\begin{array}{c}
+0\\
+\vdots\\
+0
+\end{array}
+\right]=
+\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{m1} & \cdots & a_{mn}\\
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_1\\
+\vdots\\
+x_n
+\end{array}
+\right]
+\right\rbrace
+\subset R^n
+\end{equation}
+
+\section{像空间}
+将映射的值域称为\textbf{映射$f$的像空间}．
+\begin{equation}
+Imf = \left\lbrace
+\left[
+\left.
+\begin{array}{c}
+y_1\\
+\vdots\\
+y_m
+\end{array}
+\right]
+\right|
+\left[
+\begin{array}{c}
+y_1\\
+\vdots\\
+y_m
+\end{array}
+\right]=
+\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{m1} & \cdots & a_{mn}\\
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_1\\
+\vdots\\
+x_n
+\end{array}
+\right]
+\right\rbrace
+\subset R^m
+\end{equation}
+
+\section{维数公式}
+$Kerf$是$R^n$的子空间，而$Imf$是$R^m$的子空间，它们的维度存在如下关系，称作\textbf{维度公式}$$n-dim\ Kerf = dim\ Imf$$
+\subsection{示例}
+\paragraph{例１}
+\begin{equation}
+\text{假设映射}f\left[\begin{array}{cc}
+3 & 1\\
+1 & 2
+\end{array}
+\right]\text{是从}R^2\text{到}R^2\text{的线性映射}
+\end{equation}
+那么求$dim\ Kerf$和$dim\ Imf$
+\begin{equation}
+Kerf = \left\lbrace
+\left[
+\left.
+\begin{array}{c}
+x_1\\x_2
+\end{array}
+\right]
+\right|
+\left[
+\begin{array}{c}
+0\\0
+\end{array}
+\right]
+=
+\left[
+\begin{array}{cc}
+3 & 1\\
+1 & 2
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_1\\x_2
+\end{array}
+\right]
+\right\rbrace
+=
+\left\lbrace
+\left[
+\begin{array}{c}
+0\\0
+\end{array}
+\right]
+\right\rbrace
+\end{equation}
+由于$Kerf$无法表示为$\lbrace c_1[a_{11}\ \cdots\ a_{m1}]^T + \cdots + c_n[a_{n1}\ \cdots\ a_{mn}]^T\rbrace$，因此$dim\ Kerf=0$．\\
+并且$n=2$，所以根据维数公式得到$dim\ Imf=2$．
+\paragraph{例２}
+\begin{equation}
+\text{假设映射}f\left[\begin{array}{cc}
+3 & 6\\
+1 & 2
+\end{array}
+\right]\text{是从}R^2\text{到}R^2\text{的线性映射}
+\end{equation}
+那么求$dim\ Kerf$和$dim\ Imf$
+\begin{equation}
+Kerf = \left\lbrace
+\left[
+\left.
+\begin{array}{c}
+x_1\\x_2
+\end{array}
+\right]
+\right|
+\left[
+\begin{array}{c}
+0\\0
+\end{array}
+\right]
+=
+\left[
+\begin{array}{cc}
+3 & 6\\
+1 & 2
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_1\\x_2
+\end{array}
+\right]
+\right\rbrace
+=
+\left\lbrace
+c\left.\left[
+\begin{array}{c}
+-2\\1
+\end{array}
+\right]
+\right| \forall c \in R
+\right\rbrace
+\end{equation}
+因此$dim\ Kerf=1$，并且$n=2$，根据维数公式得到$dim\ Imf=1$．
+
+\textbf{关于含free variable的augmented matrix求解，要再仔细研究？！}
+
+\section{秩}
+\textbf{秩}又称为\textbf{阶数}，$R^m$的子空间$Imf$的维数称为\textbf{$m \times n$矩阵的秩}．\\
+$m \times n$矩阵就是子空间的基中所有向量元素所组成的矩阵．
+\begin{equation}
+m \times n\text{矩阵}\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{m1} & \cdots & a_{mn}
+\end{array}
+\right]
+\text{的秩一般表示为}
+rank\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{m1} & \cdots & a_{mn}
+\end{array}
+\right]
+\end{equation}
+\subsection{秩的求法}
+和gaussian elimination中三类elementary row opertions类似．\\
+\textbf{前提：矩阵乘以可逆矩阵不会影响矩阵的秩}．\\
+原等式
+\begin{equation}
+\left[
+\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}\\
+x_{31} & x_{32} & x_{33}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}
+\right]
+\left[
+\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}\\
+x_{31} & x_{32} & x_{33}
+\end{array}
+\right]
+\end{equation}
+\begin{itemize}
+\item[\textbf{行间/列间对调}] 左乘可逆矩阵：第$i$行和第$j$行就会互换位置；右乘可逆矩阵：第$i$列和第$j$列就会互换位置．
+\begin{equation}
+\left[
+\begin{array}{ccc}
+x_{31} & x_{32} & x_{33}\\
+x_{21} & x_{22} & x_{23}\\
+x_{11} & x_{12} & x_{13}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{ccc}
+0 & 0 & 1\\
+0 & 1 & 0\\
+1 & 0 & 0
+\end{array}
+\right]
+\left[
+\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}\\
+x_{31} & x_{32} & x_{33}
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+\left[
+\begin{array}{ccc}
+x_{13} & x_{12} & x_{11}\\
+x_{23} & x_{22} & x_{21}\\
+x_{33} & x_{32} & x_{31}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}\\
+x_{31} & x_{32} & x_{33}
+\end{array}
+\right]
+\left[
+\begin{array}{ccc}
+0 & 0 & 1\\
+0 & 1 & 0\\
+1 & 0 & 0
+\end{array}
+\right]
+\end{equation}
+\item[\textbf{行/列缩放}]　左乘可逆矩阵：第$i$行缩放$k$倍；右乘可逆矩阵：第$i$列缩放$k$倍．
+\begin{equation}
+\left[
+\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+kx_{21} & kx_{22} & kx_{23}\\
+x_{31} & x_{32} & x_{33}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{ccc}
+1 & 0 & 0\\
+0 & k & 0\\
+0 & 0 & 1
+\end{array}
+\right]
+\left[
+\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}\\
+x_{31} & x_{32} & x_{33}
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+\left[
+\begin{array}{ccc}
+x_{11} & kx_{12} & x_{13}\\
+x_{21} & kx_{22} & x_{23}\\
+x_{31} & kx_{32} & x_{33}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}\\
+x_{31} & x_{32} & x_{33}
+\end{array}
+\right]
+\left[
+\begin{array}{ccc}
+1 & 0 & 0\\
+0 & k & 0\\
+0 & 0 & 1
+\end{array}
+\right]
+\end{equation}
+\item[\textbf{行/列缩放相加}] 左乘可逆矩阵：第$j$行会加上第$i$行的$k$倍；右乘可逆矩阵：第$i$列加上第$j$列的$k$倍．
+\begin{equation}
+\left[
+\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}\\
+kx_{21}+x_{31} & kx_{22}+x_{32} & kx_{23}+x_{33}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & k & 1
+\end{array}
+\right]
+\left[
+\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}\\
+x_{31} & x_{32} & x_{33}
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+\left[
+\begin{array}{ccc}
+x_{11} & x_{12}+kx_{13} & x_{13}\\
+x_{21} & x_{22}+kx_{23} & x_{23}\\
+x_{31} & x_{32}+kx_{33} & x_{33}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}\\
+x_{31} & x_{32} & x_{33}
+\end{array}
+\right]
+\left[
+\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & k & 1
+\end{array}
+\right]
+\end{equation}
+\end{itemize}
+
+\section{小结}
+由于直接求子空间的维度并不容易，而我们手头上一般拥有的是映射$f$对应的$m \times n$矩阵，因此可通过两种方式间接解决
+\begin{enumerate}
+\item 先求映射$f$核$Kerf$的维度，再通过维数公式求映射$f$像空间$Imf$(即子空间)的维度．
+\item 求映射$f$像空间$Imf$的对应的秩
+\end{enumerate}
+
+\end{CJK}
+\end{document}
