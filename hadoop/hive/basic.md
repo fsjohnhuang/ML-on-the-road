@@ -229,7 +229,7 @@ FROM table_reference
 `select select_expr,select_expr`等同于oracle的`select select_expr,select_expr from dual`
 `[DISTRIBUTE BY col_list]`，指定分发器(partitioner)，多Reducer可用．
 注意：当表达式中存在NULL，则整个表达式结果为NULL，通过`nvl()`函数将NULL转换为其他有效值．
-判断是否为NULL，`is null`或`not is null`
+判断是否为NULL，`is null`或`is not null`
 
 ### Fetch Task
 从Hive0.10.0开始支持.
