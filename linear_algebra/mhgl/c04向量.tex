@@ -123,10 +123,53 @@ C=\lbrace c_1[a_{11}\cdots a_{m1}]^T + \cdots + c_n[a_{1n}\cdots a_{mn}]^T\ |\ \
 \item $[a_{11} \cdots a_{m1}]^T, \cdots, [a_{1n} \cdots a_{mn}]^T$为线性无关向量
 \item $W=\lbrace c_1[a_{11} \cdots a_{m1}]^T + \cdots + c_n[a_{1n} \cdots a_{mn}]^T\ |\ \forall c_1,\cdots,c_n\in R \rbrace$
 \end{enumerate}
-那么我们称集合$\lbrace [a_{11} \cdots a_{m1}]^T, \cdots ,[a_{1n} \cdots a_{mn}]^T \rbrace$为＂子空间$W$的基＂，而基的元素个数$n$称为＂子空间$W$的维度＂，表示为$dimW$．
+那么我们称集合$\lbrace [a_{11} \cdots a_{m1}]^T, \cdots ,[a_{1n} \cdots a_{mn}]^T \rbrace$为＂子空间$W$的基＂，而基的元素个数$n$称为＂子空间$W$的维度＂，表示为$dimW$．\\
+\textbf{注意：}子空间是一个向量的集合，而对应的基也是一个向量的集合，而维度则是基这个向量集合的元素个数．上述仅对基和维度的概念作描述，而维度的计算方式则要通过线性映射中的核空间维度或线性映射的秩来获取．
 \subsubsection{事例}
 定义$xy$平面为$W$，而$W$为$R^3$的子空间．向量$[3\ 1\ 0]^T$和$[1\ 2\ 0]^T$属于$R^3$，且为线性无关向量．\\显然$W=\lbrace c_1[3\ 1\ 0]^T  + c_2[1\ 2\ 0]^T\ |\ \forall c_1,\cdots,c_2\in R \rbrace$，因此集合$\lbrace [3\ 1\ 0]^T, [1\ 2\ 0]^T \rbrace$为＂子空间$W$的基＂，$dimW$为$2$．
-
+\section{向量长度}
+\begin{equation}
+\left|\left|
+\begin{array}{c}
+x_1\\\vdots\\x_n
+\end{array}
+\right|\right|=
+\sqrt{x_1^2+\cdots+x_n^2}
+\end{equation}
+\section{向量内积}
+内积（也称为数量积，点积，scalar product），接受$R$上的两个向量并返回一个标量的二元运算．
+\begin{equation}
+\left[
+\begin{array}{c}
+x_{1i}\\\vdots\\x_{ni}
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_{1j}\\\vdots\\x_{nj}
+\end{array}
+\right]=x_{1i}x_{1j}+\cdots+x_{ni}x_{nj}
+\end{equation}
+\section{向量间的夹角}
+\begin{equation}
+\cos\theta = \dfrac{\left[
+\begin{array}{c}
+x_{1i}\\\vdots\\x_{ni}
+\end{array}
+\right]\left[
+\begin{array}{c}
+x_{1j}\\\vdots\\x_{nj}
+\end{array}
+\right]}{\left|\left|
+\begin{array}{c}
+x_{1i}\\\vdots\\x_{ni}
+\end{array}
+\right|\right|\times\left|\left|
+\begin{array}{c}
+x_{1j}\\\vdots\\x_{nj}
+\end{array}
+\right|\right|}
+\end{equation}
 
 
 \end{CJK}

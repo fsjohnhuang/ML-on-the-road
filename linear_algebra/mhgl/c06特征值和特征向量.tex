@@ -1,0 +1,375 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{CJKutf8}
+
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}
+\section{特征值和特征向量}
+\subsection{定义}
+\begin{equation}
+\text{当向量}
+\left[
+\begin{array}{c}
+x_1\\
+\vdots\\
+x_n
+\end{array}
+\right]
+\text{通过"}n\text{阶方阵}
+\left[
+\begin{array}{ccc}
+x_{11} & \cdots & x_{1n}\\
+\vdots & \ddots & \vdots\\
+x_{n1} & \cdots & x_{nn}
+\end{array}
+\right]
+\text{对应的线性映射}f\text{"形成的像为}
+\lambda\left[
+\begin{array}{c}
+x_1\\
+\vdots\\
+x_n
+\end{array}
+\right]
+\text{时，} 
+\end{equation}
+那么$\lambda$称为$n$阶方阵的\textbf{特征值}，向量$[x_1\cdots x_n]^T$称为$\lambda$的特征向量．而零向量不能作为特征向量．\\
+\textbf{注意：}特征值是指某映射的特征值，特征向量是指某映射下某特征值的特征向量．
+\subsection{求特征值和特征向量}
+\paragraph{特征值求法}
+特征值与映射对应的行列式有如下的关系：
+\begin{equation}
+\lambda\text{为}n\text{阶方阵}\left[
+\begin{array}{ccc}
+x_{11} & \cdots & x_{1n}\\
+\vdots & \ddots & \vdots\\
+x_{n1} & \cdots & x_{nn}
+\end{array}
+\right]\text{的特征值}
+\Leftrightarrow
+det
+\left[
+\begin{array}{ccc}
+x_{11}-\lambda & \cdots & x_{1n}\\
+\vdots & \ddots & \vdots\\
+x_{n1} & \cdots & x_{nn}-\lambda
+\end{array}
+\right]=0
+\end{equation}
+\paragraph{特征向量求法}
+得到特征值后只需带入映射公式即可得特征向量．示例：
+\begin{equation}
+\left[
+\begin{array}{cc}
+8 & -3\\
+2 & 1
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_1\\
+x_2
+\end{array}
+\right]=\lambda
+\left[
+\begin{array}{c}
+x_1\\
+x_2
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+\left[
+\begin{array}{cc}
+8 & -3\\
+2 & 1
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_1\\
+x_2
+\end{array}
+\right]=
+\left[
+\begin{array}{cc}
+\lambda & 0\\
+0 & \lambda
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_1\\
+x_2
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+\left[
+\begin{array}{cc}
+8 & -3\\
+2 & 1
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_1\\
+x_2
+\end{array}
+\right]-
+\left[
+\begin{array}{cc}
+\lambda & 0\\
+0 & \lambda
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_1\\
+x_2
+\end{array}
+\right]=\left[
+\begin{array}{c}
+0\\
+0
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+\left(\left[
+\begin{array}{cc}
+8 & -3\\
+2 & 1
+\end{array}
+\right]
+-
+\left[
+\begin{array}{cc}
+\lambda & 0\\
+0 & \lambda
+\end{array}
+\right]\right)
+\left[
+\begin{array}{c}
+x_1\\
+x_2
+\end{array}
+\right]=\left[
+\begin{array}{c}
+0\\
+0
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+\left[
+\begin{array}{cc}
+8-\lambda & -3\\
+2 & 1-\lambda
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_1\\
+x_2
+\end{array}
+\right]=\left[
+\begin{array}{c}
+0\\
+0
+\end{array}
+\right]
+\end{equation}
+\section{$n$阶方阵$p$次幂的求法}
+由于$n$阶方阵特征值和特征向量关系如下：
+\begin{equation}
+\left[
+\begin{array}{ccc}
+x_{11} & \cdots & x_{1n}\\
+\vdots & \ddots & \vdots\\
+x_{n1} & \cdots & x_{nn}
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+a_1\\
+\vdots\\
+a_n
+\end{array}
+\right]
+=\lambda
+\left[
+\begin{array}{c}
+a_1\\
+\vdots\\
+a_n
+\end{array}
+\right]
+\end{equation}
+然后将$n$阶方阵所有特征值和特征向量合并为如下公式：
+\begin{equation}
+\left[
+\begin{array}{ccc}
+x_{11} & \cdots & x_{1n}\\
+\vdots & \ddots & \vdots\\
+x_{n1} & \cdots & x_{nn}
+\end{array}
+\right]
+\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{n1} & \cdots & a_{nn}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{ccc}
+\lambda_1a_{11} & \cdots & \lambda_na_{1n}\\
+\vdots & \ddots & \vdots\\
+\lambda_1a_{n1} & \cdots & \lambda_na_{nn}
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+=
+\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{n1} & \cdots & a_{nn}
+\end{array}
+\right]
+\left[
+\begin{array}{ccc}
+\lambda_1 & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & \lambda_n
+\end{array}
+\right]
+\end{equation}
+然后通过两边乘以逆矩阵得到
+\begin{equation}
+\left[
+\begin{array}{ccc}
+x_{11} & \cdots & x_{1n}\\
+\vdots & \ddots & \vdots\\
+x_{n1} & \cdots & x_{nn}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{n1} & \cdots & a_{nn}
+\end{array}
+\right]
+\left[
+\begin{array}{ccc}
+\lambda_1 & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & \lambda_n
+\end{array}
+\right]
+\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{n1} & \cdots & a_{nn}
+\end{array}
+\right]^{-1}
+\end{equation}
+那么$n$阶方阵的$p$次幂则是
+\begin{equation}
+\left[
+\begin{array}{ccc}
+x_{11} & \cdots & x_{1n}\\
+\vdots & \ddots & \vdots\\
+x_{n1} & \cdots & x_{nn}
+\end{array}
+\right]^p
+=
+\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{n1} & \cdots & a_{nn}
+\end{array}
+\right]
+\left[
+\begin{array}{ccc}
+\lambda_1^p & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & \lambda_n^p
+\end{array}
+\right]
+\left[
+\begin{array}{ccc}
+a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{n1} & \cdots & a_{nn}
+\end{array}
+\right]^{-1}
+\end{equation}
+\section{是否存在重解和对角化？}
+并不是所有$n$阶方阵都可以以它的特征值矩阵和特征向量矩阵表示，这取决于特征值对应的特征向量是否足够．\\
+足够的情况：
+\begin{equation}
+n\text{阶方阵}\left[
+\begin{array}{ccc}
+1 & 0 & 0 \\
+1 & 1 & -1 \\
+-2 & 0 & 3
+\end{array}
+\right]\text{的特征值分别是}3\text{和}1\text{，}
+\end{equation}
+\begin{equation}
+\text{然后分别求出它们对应的特征向量}
+c_1\left[
+\begin{array}{c}
+0\\1\\-2
+\end{array}
+\right]
+\text{和}
+c_2\left[
+\begin{array}{c}
+1\\0\\1
+\end{array}
+\right]
++
+c_3\left[
+\begin{array}{c}
+0\\1\\0
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+\text{最后得出}
+\left[
+\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 1\\
+-2 & 1 & 0
+\end{array}
+\right]
+\left[
+\begin{array}{ccc}
+3 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}
+\right]
+\left[
+\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 1\\
+-2 & 1 & 0
+\end{array}
+\right]^{-1}
+\end{equation}
+若$1$对应的特征向量无法表示为$c_2[1\ 0\ 1]^T+c_3[0\ 1\ 0]^T$的形式则无法得到最后一条式子．
+
+\end{CJK}
+\end{document}

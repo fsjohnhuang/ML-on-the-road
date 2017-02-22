@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.10)  8 FEB 2017 14:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.10)  19 FEB 2017 23:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -597,61 +597,62 @@ sy/m/n/12 j 8\OML/cmm/m/it/12 c[]; []  ; c[] \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/1
 \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 R[]\OMS/cmsy/m/n/12 g
  []
 
-[2] (./c04向量.aux) ) 
+[2] [3] (./c04向量.aux) ) 
 Here is how much of TeX's memory you used:
- 3020 strings out of 493029
- 33850 string characters out of 6136234
- 99152 words of memory out of 5000000
- 6363 multiletter control sequences out of 15000+600000
- 33562 words of font info for 119 fonts, out of 8000000 for 9000
+ 3103 strings out of 493029
+ 35071 string characters out of 6136234
+ 99769 words of memory out of 5000000
+ 6436 multiletter control sequences out of 15000+600000
+ 35316 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,9n,29p,3925b,858s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts
-/type1/arphic/gbsnu/gbsnu4e.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsn
-u4f.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu50.pfb></usr/share/texm
-f/fonts/type1/arphic/gbsnu/gbsnu51.pfb></usr/share/texmf/fonts/type1/arphic/gbs
-nu/gbsnu52.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu53.pfb></usr/sha
-re/texmf/fonts/type1/arphic/gbsnu/gbsnu54.pfb></usr/share/texmf/fonts/type1/arp
-hic/gbsnu/gbsnu56.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu57.pfb></
-usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu59.pfb></usr/share/texmf/fonts/ty
-pe1/arphic/gbsnu/gbsnu5b.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu5c
-.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu5e.pfb></usr/share/texmf/f
-onts/type1/arphic/gbsnu/gbsnu5f.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/
-gbsnu60.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu61.pfb></usr/share/
-texmf/fonts/type1/arphic/gbsnu/gbsnu62.pfb></usr/share/texmf/fonts/type1/arphic
-/gbsnu/gbsnu63.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu65.pfb></usr
-/share/texmf/fonts/type1/arphic/gbsnu/gbsnu66.pfb></usr/share/texmf/fonts/type1
-/arphic/gbsnu/gbsnu67.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu68.pf
-b></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu6b.pfb></usr/share/texmf/font
-s/type1/arphic/gbsnu/gbsnu6c.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbs
-nu6e.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu70.pfb></usr/share/tex
-mf/fonts/type1/arphic/gbsnu/gbsnu71.pfb></usr/share/texmf/fonts/type1/arphic/gb
-snu/gbsnu72.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu73.pfb></usr/sh
-are/texmf/fonts/type1/arphic/gbsnu/gbsnu75.pfb></usr/share/texmf/fonts/type1/ar
-phic/gbsnu/gbsnu76.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu77.pfb><
-/usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu79.pfb></usr/share/texmf/fonts/t
-ype1/arphic/gbsnu/gbsnu7a.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu7
-b.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu7d.pfb></usr/share/texmf/
-fonts/type1/arphic/gbsnu/gbsnu7e.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu
-/gbsnu80.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu82.pfb></usr/share
-/texmf/fonts/type1/arphic/gbsnu/gbsnu88.pfb></usr/share/texmf/fonts/type1/arphi
-c/gbsnu/gbsnu89.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu8b.pfb></us
-r/share/texmf/fonts/type1/arphic/gbsnu/gbsnu8d.pfb></usr/share/texmf/fonts/type
-1/arphic/gbsnu/gbsnu8f.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu90.p
-fb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu91.pfb></usr/share/texmf/fon
-ts/type1/arphic/gbsnu/gbsnu95.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gb
-snu96.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu97.pfb></usr/share/te
-xmf/fonts/type1/arphic/gbsnu/gbsnuff.pfb>
-Output written on c04向量.pdf (2 pages, 238483 bytes).
+ 30i,11n,29p,2193b,908s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/f
+onts/type1/arphic/gbsnu/gbsnu4e.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/
+gbsnu4f.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu50.pfb></usr/share/
+texmf/fonts/type1/arphic/gbsnu/gbsnu51.pfb></usr/share/texmf/fonts/type1/arphic
+/gbsnu/gbsnu52.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu53.pfb></usr
+/share/texmf/fonts/type1/arphic/gbsnu/gbsnu54.pfb></usr/share/texmf/fonts/type1
+/arphic/gbsnu/gbsnu56.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu57.pf
+b></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu59.pfb></usr/share/texmf/font
+s/type1/arphic/gbsnu/gbsnu5b.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbs
+nu5c.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu5e.pfb></usr/share/tex
+mf/fonts/type1/arphic/gbsnu/gbsnu5f.pfb></usr/share/texmf/fonts/type1/arphic/gb
+snu/gbsnu60.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu61.pfb></usr/sh
+are/texmf/fonts/type1/arphic/gbsnu/gbsnu62.pfb></usr/share/texmf/fonts/type1/ar
+phic/gbsnu/gbsnu63.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu65.pfb><
+/usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu66.pfb></usr/share/texmf/fonts/t
+ype1/arphic/gbsnu/gbsnu67.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu6
+8.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu69.pfb></usr/share/texmf/
+fonts/type1/arphic/gbsnu/gbsnu6b.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu
+/gbsnu6c.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu6e.pfb></usr/share
+/texmf/fonts/type1/arphic/gbsnu/gbsnu70.pfb></usr/share/texmf/fonts/type1/arphi
+c/gbsnu/gbsnu71.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu72.pfb></us
+r/share/texmf/fonts/type1/arphic/gbsnu/gbsnu73.pfb></usr/share/texmf/fonts/type
+1/arphic/gbsnu/gbsnu75.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu76.p
+fb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu77.pfb></usr/share/texmf/fon
+ts/type1/arphic/gbsnu/gbsnu79.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gb
+snu7a.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu7b.pfb></usr/share/te
+xmf/fonts/type1/arphic/gbsnu/gbsnu7d.pfb></usr/share/texmf/fonts/type1/arphic/g
+bsnu/gbsnu7e.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu80.pfb></usr/s
+hare/texmf/fonts/type1/arphic/gbsnu/gbsnu82.pfb></usr/share/texmf/fonts/type1/a
+rphic/gbsnu/gbsnu83.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu88.pfb>
+</usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu89.pfb></usr/share/texmf/fonts/
+type1/arphic/gbsnu/gbsnu8b.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu
+8d.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu8f.pfb></usr/share/texmf
+/fonts/type1/arphic/gbsnu/gbsnu90.pfb></usr/share/texmf/fonts/type1/arphic/gbsn
+u/gbsnu91.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu95.pfb></usr/shar
+e/texmf/fonts/type1/arphic/gbsnu/gbsnu96.pfb></usr/share/texmf/fonts/type1/arph
+ic/gbsnu/gbsnu97.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnuff.pfb>
+Output written on c04向量.pdf (3 pages, 265253 bytes).
 PDF statistics:
- 290 PDF objects out of 1000 (max. 8388607)
- 177 compressed objects within 2 object streams
+ 303 PDF objects out of 1000 (max. 8388607)
+ 185 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 201 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 209 words of extra memory for PDF output out of 10000 (max. 10000000)
 

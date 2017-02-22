@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+
+\begin{document}
+\title{The Language of Set Theory}
+\maketitle
+\section{Basic}
+\subsection{Empty Set}
+$S_1=\lbrace\rbrace$ or $S_1=\emptyset$
+\subsection{"is in" and "is not in"}
+Let $S_1=\lbrace a,b,c\rbrace$. $a$ is an element of set $S_1$, which denoted as $a \in S_1$. However $d$ is not in the set $S_1$ which denoted as $d \notin S_1$.
+\subsection{Subset}
+Let $S_1=\lbrace a,b,c\rbrace$, $a$, $S_2=\lbrace b,c\rbrace$ and $S_3=\lbrace a,b,c\rbrace$. $S_2$ is the subset of $S_1$, which denoted as $S_2 \subset S_1$, and $S_1$ is the subset of $S_3$ which denoted as $S_3 \subseteq S_1$.
+\subsection{Equal Sets}
+Let $S_3=\lbrace a,b,c\rbrace$,\\
+Then $S_1=S_3 \Leftrightarrow S_1 \subset S_3$ and $S_1 \supset S_3$. 
+\subsection{Union Set}
+$S_1 \cup S_2$
+\subsection{Intersection Set}
+$S_1 \cap S_2$
+\subsection{Difference Set}
+$S_1\setminus S_2$
+
+\section{Span of a Set of Vectors}
+\paragraph{Definition}
+For a nonempty set $S=\lbrace \underline{u_1}, \underline{u_2},\cdots,\underline{u_k} \rbrace$ of vectors in $R^n$, we define the span of $S$ to be the set of all linear combinations of $\underline{u_1}, \underline{u_2},\cdots,\underline{u_k}$ in $R^n$. This set is denoted by $Span\ S$ or $Span \ \lbrace \underline{u_1}, \underline{u_2},\cdots,\underline{u_k} \rbrace$.
+$$Span\ S=\lbrace c_1\underline{u_1}+c_2\underline{u_2}+\cdots+c_k\underline{u_k}|\forall c_1,c_2,\cdots,c_k \in R \rbrace$$
+or
+$$
+Span\ S=\lbrace A\underline{v}|v \in R^k , A = [\underline{u_1}\ \cdots\ \underline{u_k}]\rbrace
+$$
+When we want to say vector $\underline{v}$ is the linear combination of vectors $\underline{u_1}, \underline{u_2},\cdots,\underline{u_k}$, we could denote it by
+$$\underline{v} \in Span\ S$$
+\subsection{Properties}
+\begin{itemize}
+\item $Span\ \lbrace 0\rbrace = \lbrace 0\rbrace$
+\item $Span\ \lbrace \underline{u}\rbrace$ is the set of all scalar multiples of vector $\underline{u}$. 
+\item If $S$ contains a nonzero vector, then $Span\ S$ has infinitely many vectors.
+\end{itemize}
+
+\subsection{$\underline{v} \in Span\ S$ or not?}
+Let $\underline{v} = [a_1\ \cdots\ a_k]^T$ and  $S=[\underline{u_1}\ \cdots\ \underline{u_k}]$\\
+then
+$\underline{v} \in Span\ S \Leftrightarrow$
+the solution set of $[\underline{u_1}\ \cdots\ \underline{u_k}\  \underline{v}]$ is consistent.
+
+\subsection{Definition of Generating Set}
+If $S,V \subset R^n$ and $Span\ S=V$, then we say "$S$ is a generating set for $V$" or "$S$ generates $V$".
+\\\\
+If we don't know the actual vector $\underline{v}$, how to determine? \\The answer is resolve it by $rank\ A$.\\
+For any $\underline{v} \in R^n$, let $[R\ \underline{c}]$ whose $R \in M_{m \times n}$ and $\underline{c} \in R^n$ be the reduced row echelon form of $[A\ \underline{v}], A \in M_{m \times n}, \underline{v} \in R^n$.\\
+If the $rank\ R=n$, then $A$ is the generating set of $R^n$(i.e. $Span\ \lbrace a_1,\cdots, a_n\rbrace = R^n | [a_1\ \cdots\ a_n] = A$).
+\paragraph{Theorem1}
+The following statements about an $m\times n$ matrix $A$ are equivalent.
+\begin{itemize}
+\item The span of the columns of $A$ is $R^m$.
+\item The equation $A\underline{x}=\underline{b}$ has at least one solution.(i.e. $A\underline{x}=\underline{b}$ is consistent, for each $\underline{b} \in R^m$)
+\item The rank of $A$ is $m$, the number of rows of $A$.
+\item The reduced row echelon form of $A$ has no zero rows.
+\item There is a pivot position in each row of $A$.
+\end{itemize}
+\paragraph{Theorem2}
+Let $S=\lbrace \underline{u_1},\underline{u_2},\cdots,\underline{u_k}\rbrace$ be a set of vectors from $R^n$ and let $\underline{v}$ be a vector in $R^n$. Then $Span\ S = Span\ (S \cup \lbrace \underline{v}\rbrace)$ if and only if $\underline{v}$ belongs to the span of $S$. The $S$ is the smallest generating set for $Span\ S$.
+\subparagraph{Proof}
+Since $Span\ S \subseteq Span\ (S\cup \lbrace\underline{v}\rbrace)$, only need to show $$Span\ (S\cup \lbrace\underline{v}\rbrace) \subseteq Span\ S \Leftrightarrow \underline{v} \in Span\ S$$
+$$
+Let\ \underline{v} \in Span\ S \Rightarrow \underline{v} = c_1\underline{u_1}+\cdots+c_n\underline{u_n}\ |\ c_1,\cdots,c_n \in R\ and\ \underline{u_1},\cdots,\underline{u_n} \in S
+$$
+$$
+Then\ \forall x \in Span\ (S \cup \underline{v}) \Rightarrow d_1\underline{u_1}+\cdots+d_n\underline{u_n}+d_k\underline{v}\ |\ d_1,\cdots,d_k \in R\ and\ \underline{u_1},\cdots,\underline{u_n} \in S
+$$
+$$
+=(d_1+c_1d_k)\underline{u_1}+\cdots+(d_n+c_nd_k)\underline{u_n}
+$$
+$$
+=k_1\underline{u_1} + \cdots + k_n\underline{u_n}\ |\ k_1,\cdots,k_n \in R
+$$
+$$
+= Span\ S
+$$
+
+\section{Linear Dependence and Linear Independence}
+
+
+\end{document}
