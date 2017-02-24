@@ -587,6 +587,28 @@ x_{31} & x_{32} & x_{33}
 \right]
 \end{equation}
 \end{itemize}
+\subsection{示例}
+\begin{equation}
+\text{求}rank\ \left[
+\begin{array}{ccc}
+1 & 2 & -1\\
+-1 & 1 & -8\\
+2 & -1 & 13\\
+1 & -1 & 8
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+=rank\ \left[
+\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}
+\right]
+\end{equation}
+(24)矩阵只有2行非零行，因此原矩阵(23)的秩为2.
 
 \section{小结}
 由于直接求子空间的维度并不容易，而我们手头上一般拥有的是映射$f$对应的$m \times n$矩阵，因此可通过两种方式间接解决

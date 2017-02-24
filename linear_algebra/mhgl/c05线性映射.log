@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.10)  18 FEB 2017 09:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.10)  22 FEB 2017 22:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -589,13 +589,13 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] (./c05线性�
 �射.aux) ) 
 Here is how much of TeX's memory you used:
- 3238 strings out of 493029
- 37251 string characters out of 6136234
+ 3246 strings out of 493029
+ 37372 string characters out of 6136234
  105985 words of memory out of 5000000
- 6541 multiletter control sequences out of 15000+600000
- 37259 words of font info for 131 fonts, out of 8000000 for 9000
+ 6547 multiletter control sequences out of 15000+600000
+ 37843 words of font info for 133 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,10n,28p,803b,949s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,10n,28p,808b,949s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/s
@@ -642,7 +642,7 @@ hic/gbsnu/gbsnu94.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu95.pfb></
 usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu96.pfb></usr/share/texmf/fonts/ty
 pe1/arphic/gbsnu/gbsnu97.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnuff
 .pfb>
-Output written on c05线性映射.pdf (4 pages, 305792 bytes).
+Output written on c05线性映射.pdf (4 pages, 307004 bytes).
 PDF statistics:
  320 PDF objects out of 1000 (max. 8388607)
  196 compressed objects within 2 object streams
