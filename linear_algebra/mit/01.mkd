@@ -1,0 +1,131 @@
+<script src="./node_modules/d3/build/d3.min.js"></script>
+
+# 第一课 方程组的几何解释
+从求解线性方程组开始：
+
+\begin{equation}\begin{split}
+2x-y=0\\
+-x+2y=3
+\end{split}\end{equation}
+
+上述方程组可表示为以下3种几何解释：行图像(Row Picture)、列图像(Column Picture) 和 矩阵形式(Matrix Form)
+
+## 行图像(Row Picture)
+逐条方程式作几何图像。
+
+$2x-y=0$为线性方程，那么求两个坐标点即可作图。枚举得到$(0,0)$和$(1,2)$两个坐标点。
+
+$-x+2y=3$为线性方程，那么求两个坐标点即可作图。枚举得到$(1,2)$和$(-1,1)$两个坐标点。
+
+二元一次方程，确定一条线。此时行图像就是两个二元一次方程的相交点。
+
+三元一次方程，确定一个面。此时行图像就是三个三元一次方程的相交点。
+
+<script>
+;(function(){
+var svg = d3.select('body').append('svg').attr('width', 400).attr('height',250)
+
+var xScale = d3.scaleLinear().domain([0,4]).range([0,200])
+var xAxis = d3.axisBottom().scale(xScale)
+var gAxis = svg.append('g').attr('transform','translate(50,210)')
+xAxis(gAxis)
+
+var yScale = d3.scaleLinear().domain([4,0]).range([0,200])
+var yAxis = d3.axisLeft().scale(yScale)
+var gAxis = svg.append('g').attr('transform','translate(50,10)')
+yAxis(gAxis)
+
+}())
+</script>
+
+
+## 列图像(Column Picture)
+相同变量的系数组成一列(向量，Vector)，方程式数量即为每个向量的分量(component)数量。然后逐列作图。
+$$
+\left[
+\begin{matrix}
+2\\-1
+\end{matrix}
+\right]x
++
+\left[
+\begin{matrix}
+-1\\2
+\end{matrix}
+\right]y
+=
+\left[
+\begin{matrix}
+0\\3
+\end{matrix}
+\right]
+$$
+解方程组就变成，求左侧向量如何组合为右侧向量——**线性组合(Linear Combination)**
+
+向量$\left[\begin{matrix}2\\-1\end{matrix}\right]$则对应$(0,0)$到$(2,-1)$的有向直线，而向量$\left[\begin{matrix}-1\\2\end{matrix}\right]$则对应$(0,0)$到$(-1,2)$的有向直线。然后经过线性组合成$(0,0)$到$(0,3)$的有向直线。
+
+二个分量的向量和三个分量的向量，作列图像时均是**原点**到向量对应坐标点的有向直线。
+
+当分量/变量/维度多于2时，则难以通过几何图像求解，而线性代数就是解决方法。
+
+## 矩阵形式(Matrix Form)
+将方程组转换形如$A\vec{x}=\vec{b}$。
+$$
+\left[\begin{matrix}
+2&-1\\
+-1&2
+\end{matrix}\right]
+\left[\begin{matrix}
+x\\
+y
+\end{matrix}\right]
+=
+\left[\begin{matrix}
+0\\
+3
+\end{matrix}\right]
+$$
+
+对于**可逆矩阵(Invertible Matrix)A**，可以线性组合出任意的**向量b**。
+
+## 矩阵 乘以 向量
+$$
+\left[\begin{matrix}
+a_{11}&a_{12}\\
+a_{21}&a_{22}
+\end{matrix}\right]
+\left[\begin{matrix}
+b_{11}\\
+b_{21}
+\end{matrix}\right]
+$$
+### 方式1-线性组合的方式（优先用这方式）
+$$
+b_{11}
+\left[\begin{matrix}
+a_{11}\\a_{21}
+\end{matrix}\right]
++
+b_{21}
+\left[\begin{matrix}
+a_{12}\\a_{22}
+\end{matrix}\right]
+$$
+### 方式2-行列进行向量点乘(dot product)
+$$
+\left[\begin{matrix}
+\left[\begin{matrix}
+a_{11}&a_{12}
+\end{matrix}\right]
+\left[\begin{matrix}
+b_{11}\\b_{12}
+\end{matrix}\right]
+\\
+\left[\begin{matrix}
+a_{21}&a_{22}
+\end{matrix}\right]
+\left[\begin{matrix}
+b_{11}\\b_{12}
+\end{matrix}\right]
+\end{matrix}\right]
+$$

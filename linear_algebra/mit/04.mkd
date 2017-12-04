@@ -1,0 +1,44 @@
+# A的LU分解
+对$A$进行消元，得到此方程式$EA=U$。<br>
+这时两边同时左乘$E^{-1}$，得到$E^{-1}EA=E^{-1}U$，约去后得到$A=E^{-1}U$。<br>
+然后用$L$代表$E^{-1}$，得到$A=LU$。<br>
+L代表下三角阵(Lower Triangular),U代表上三角阵(Upper Triangular)。<br>
+
+性质：<br>
+1. 如果没有行交换(No Row Exchanges)，那么消元乘数(Multiplier)就直接写到$L$即可。<br>
+$n\times n$的方阵$A$要经过$n^2+(n-1)^2+\dots+1^2$才能得到U。操作是针对方阵中的元素(entry)，所以一次行消元都执行了n步操作。
+
+## 矩阵相乘的逆矩阵
+$$
+(AB)(B^{-1}A^{-1})=I
+$$
+通过矩阵相乘的结合律得到
+$$
+\begin{equation}\begin{split}
+(AB)(B^{-1}A^{-1})&=(AB)(B^{-1}A^{-1})\\
+&=A(BB^{-1})A^{-1}\\
+&=AIA^{-1}\\
+&=AA^{-1}\\
+&=I
+\end{split}\end{equation}
+$$
+即$(AB)^{-1}=B^{-1}A^{-1}$
+
+## 转置矩阵
+$A^T$为$A$的转置矩阵，就是$A$的行转换成为$A^T$的列。<br>
+示例：
+$$
+若A=\left[\begin{matrix}
+a&b&c\\
+d&e&f
+\end{matrix}\right]，则A^T=\left[\begin{matrix}
+a&d\\
+b&e\\
+c&f
+\end{matrix}\right]
+$$
+性质：<br>
+1.$(A^T)^{-1}=(A^{-1})^T$<br>
+2.$(AA^{-1})^T=A^T(A^{-1})^T=I$<br>
+
+线性代数是离散的，而微积分是考虑连续情况的“求和”。
