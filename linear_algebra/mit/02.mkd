@@ -177,6 +177,7 @@ c&d\\
 a&b
 \end{matrix}\right]
 $$
+P的行索引为表示目标行的索引，而列索引表示源行的索引。
 ### 列置换
 $$
 \left[\begin{matrix}
@@ -188,6 +189,7 @@ b&a\\
 d&c
 \end{matrix}\right]
 $$
+P的列索引为表示目标列的索引，而行索引表示源列的索引。
 
 ## 可逆矩阵(Invertible Matrix)
 $E$为原矩阵，$E^{-1}$为逆矩阵，$I$为单位矩阵(Identity Matrix)，那么：$E^{-1}E=I$。<br>

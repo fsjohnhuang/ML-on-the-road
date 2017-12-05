@@ -1,0 +1,69 @@
+# 转置-置换-向量空间R
+
+## 置换(Permutations)
+$$
+PA=LU
+$$
+
+## 对称矩阵(Symmetrix Matrix)
+若$A=A^T$，那么$A$就是对称矩阵。<br>
+而$R^TR$是对称矩阵。($R$为长方形矩阵)<br>
+示例:<br>
+$$
+\left[\begin{matrix}
+1&3\\
+2&3\\
+4&1
+\end{matrix}\right]
+\left[\begin{matrix}
+1&2&4\\
+3&3&1
+\end{matrix}\right]
+=\left[\begin{matrix}
+10&11&7\\
+11&13&11\\
+7&11&17
+\end{matrix}\right]
+$$
+证明：
+$$
+\begin{equation}\begin{split}
+(R^TR)^T&=R^T(R^T)^T\\
+&=R^TR
+\end{split}\end{equation}
+$$
+
+## 向量空间(Vector Spaces)
+一堆向量的集合，且满足：<br>
+1. 集合中对向量作乘数运算(Scale of Multiplication)，结果仍然属于该集合；<br>
+2. 集合中两向量相加，结果仍然属于该集合。<br>
+就是集合中的向量作线性组合，其结果结果仍然属于该集合。<br>
+其中必定会包含$\vec{0}$，若连$\vec{0}$都不包含，那么必定不能构成向量空间。<br>
+示例：<br>
+二维实数向量集合$\mathbb{R^2}$为向量空间，因为取$\left[\begin{matrix}1\\3\end{matrix}\right]\in\mathbb{R^2}$和$\left[\begin{matrix}2\\5\end{matrix}\right]\in\mathbb{R^2}$进行线性组合，$3\left[\begin{matrix}1\\3\end{matrix}\right]+4\left[\begin{matrix}2\\5\end{matrix}\right]=\left[\begin{matrix}11\\29\end{matrix}\right]\in\mathbb{R^2}$。<br>
+注意：每个向量空间中必定包含零向量(Zero Matrix，$\vec{0}$)。<br>
+$\mathbb{R^2}$的$\vec{0}$为$\left[\begin{matrix}0\\0\end{matrix}\right]$，而$\mathbb{R^3}$的$\vec{0}$为$\left[\begin{matrix}0\\0\\0\end{matrix}\right]$，如此类推。<br>
+
+### 向量子空间(Sub Vector Spaces)
+就是满足向量空间条件的，某个向量空间的子集。<br>
+$\mathbb{R^2}$的向量子空间：<br>
+1. $\mathbb{R^2}$，自身为最大的子空间。<br>
+2. 经过坐标原点的直线。<br>
+3. $\vec{0}$，最子空间。<br>
+
+$\mathbb{R^3}$的向量子空间：<br>
+1. $\mathbb{R^3}$，自身为最大的子空间。<br>
+2. 经过坐标原点的平面(plane)。<br>
+3. 经过坐标原点的直线(line)。<br>
+4. $\vec{0}$，最子空间。<br>
+
+$\mathbb{P}$和$\mathbb{L}$是子空间(Subspace)<br>
+1. 那么$\mathbb{P}\cup \mathbb{L}$是否也是子空间呢？-答案是**否定**的。<br>
+2. 那么$\mathbb{P}\cap \mathbb{L}$是否也是子空间呢？-答案是**肯定**的。<br>
+
+### 列空间(Column Spaces)
+矩阵$A$的各列进行线性组合构成的向量子空间，则称为矩阵$A$的列空间（记作$C(A)$）。<br>
+示例：<br>
+$$
+A=\left[\begin{matrix}1&-1\\1&1\end{matrix}\right]，那么C(A)=\left[\begin{matrix}1&-1\\1&1\end{matrix}\right]\left[\begin{matrix}a\\b\end{matrix}\right]=\mathbb{R^2}
+$$

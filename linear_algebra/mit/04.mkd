@@ -3,6 +3,18 @@
 这时两边同时左乘$E^{-1}$，得到$E^{-1}EA=E^{-1}U$，约去后得到$A=E^{-1}U$。<br>
 然后用$L$代表$E^{-1}$，得到$A=LU$。<br>
 L代表下三角阵(Lower Triangular),U代表上三角阵(Upper Triangular)。<br>
+$$
+A=\left[\begin{matrix}
+1&0&0\\
+a&1&0\\
+b&c&1
+\end{matrix}\right]
+\left[\begin{matrix}
+1&a&b\\
+0&1&c\\
+0&0&1
+\end{matrix}\right]
+$$
 
 性质：<br>
 1. 如果没有行交换(No Row Exchanges)，那么消元乘数(Multiplier)就直接写到$L$即可。<br>
@@ -24,7 +36,7 @@ $$
 $$
 即$(AB)^{-1}=B^{-1}A^{-1}$
 
-## 转置矩阵
+## 转置矩阵（Transpose Matrix）
 $A^T$为$A$的转置矩阵，就是$A$的行转换成为$A^T$的列。<br>
 示例：
 $$
@@ -39,6 +51,7 @@ c&f
 $$
 性质：<br>
 1.$(A^T)^{-1}=(A^{-1})^T$<br>
-2.$(AA^{-1})^T=A^T(A^{-1})^T=I$<br>
+2.$(AB)^T=B^TA^T$<br>
+3.$(AA^{-1})^T=(A^{-1})^TA^T=I$<br>
 
 线性代数是离散的，而微积分是考虑连续情况的“求和”。
