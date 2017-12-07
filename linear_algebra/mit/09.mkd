@@ -1,0 +1,50 @@
+# 第9课，线性相关性、基和维数
+
+向量空间的基(Basis)
+
+维数(Dimension)
+
+
+## 线性无关(Linear independence)
+当$A=\left[\begin{matrix}\vec{x_1}&\vec{x_2}&\dots&\vec{x_n}\end{matrix}\right]$的$N(A)=\vec{0}$(即$rank=n$)，那么$\vec{x_1},\vec{x_2},\dots,\vec{x_n}$是线性无关。
+
+## 向量组“生成”的子空间(Spanning a subspace)
+矩阵$A$的各列左线性组合生成子空间(就是列空间)，那问题是：<br>
+1. 若列数量不足则无法生成目标子空间；<br>
+2. 若列数量过多则各列线性相关。<br>
+
+## 基(Basis) 
+一组满足以下条件的向量：<br>
+1. 各列线性无关；<br>
+2. 各列线性组合生成目标子空间。<br>
+
+性质：<br>
+1. 各列线性无关$\Rightarrow$基为可逆方阵。<br>
+2. 对于同一个子空间，存在多个不同的基，但基中的向量数量时一样的。基的向量数量就是子空间的**维数(Dimension)**（注意：不是矩阵的维数，而是子空间的维数）<br>
+
+示例：求$C(A)$的基和维数<br>
+$$
+A=\left[\begin{matrix}
+1&2&3&1\\
+1&1&2&1\\
+1&2&3&1
+\end{matrix}\right]
+\Rightarrow
+\left[\begin{matrix}
+1&0&1&1\\
+0&1&1&0\\
+0&0&0&0
+\end{matrix}\right]
+$$
+因此矩阵$A$的秩为$2$，即$主列=主变量=2$，而$自由列=自由变量=1$，即零空间$N(A)$不仅仅包含$\vec{0}$，即矩阵$A$的各列为线性相关，各列无法构成列空间$C(A)$的基。<br>
+那么列1和列2为主列（线性无关），提取出来即可构造$C(A)$的基。
+$$
+\left[\begin{matrix}
+1\\1\\1
+\end{matrix}\right],
+\left[\begin{matrix}
+2\\1\\2
+\end{matrix}\right]
+$$
+然后列空间$C(A)$的维数为$2$。
+
